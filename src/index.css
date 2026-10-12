@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-fog: #e8ecf4;
+  --color-line: #d3d9e6;
+  --color-ink: #101c3a;
+  --color-slate-ink: #55607c;
+  --color-cobalt: #3355ff;
+  --color-cobalt-dark: #2442d6;
+  --color-signal: #ffb020;
+  --color-signal-soft: #fff4d9;
+}
+
+html {
+  background: var(--color-fog);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-fog);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Klaviatura bilan yurganda aniq ko'rinadigan fokus */
+:focus-visible {
+  outline: 3px solid var(--color-cobalt);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
